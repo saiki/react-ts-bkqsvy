@@ -18,12 +18,28 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
+      <React.Fragment>
+        <header className="sticky">
+          <div className="container">
+            <div className="nav-brand">
+              <a>
+                <h1>
+                  <i className="snes-jp-logo brand-logo" />
+                </h1>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div className="container">
+          <main className="main-content">
+
+            <Hello name={this.state.name} />
+            <p>
+              Start editing to see some magic happen :)
+            </p>
+          </main>
+        </div>
+      </React.Fragment>
     );
   }
 }
